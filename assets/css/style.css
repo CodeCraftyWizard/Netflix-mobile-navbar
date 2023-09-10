@@ -1,0 +1,250 @@
+@charset "utf-8";
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain) ============================================ */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Force scrollbar */
+html { overflow-y: scroll; }
+
+/* Align radios and text inputs with their label */
+input[type='radio'] { vertical-align: text-bottom; }
+
+/* Hand cursor on clickable input elements */
+label,
+input[type='button'],
+input[type='submit'],
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em { font-style: italic; }
+
+img {
+  width: 100%;
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup { top: -.7em; }
+sub { bottom: -.25em; }
+
+/* 1.2. Clear Fix ========================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after { clear: both; }
+.cf { zoom: 1; }
+
+/*for all*/
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+a { 
+  display: inline-block;
+  text-decoration: none; 
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+/* for wrapper */
+.wrapper {
+  max-width: 1360px;
+  width: 86%; 
+  margin: 0 auto;
+}
+
+/*=================================
+  Header styling starts here
+=================================*/
+
+header { position: relative; }
+header .wrapper { width: 100%; }
+.text-indent { text-indent: -9999px; }
+
+.hamburger { 
+  padding: 15px; 
+  cursor: pointer;
+}
+
+.bar { 
+  width: 18px;
+  height: 3px;
+  margin-bottom: 3px;
+  border-radius: 3px;
+  display: block;
+  background: #000;
+}
+
+.nav {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  transition: transform 0.3s 
+  ease-in-out;
+}
+
+.navbar {
+  width: 77%;
+  height: 100ch;
+  background-color: #fff;
+  padding: 40px;
+}
+
+.nav-black {
+  max-width: 480px;
+  width: 60%;
+  min-width: 320px;
+  background-color: #000;
+  transition-delay: 0.4s;
+}
+
+.nav-red {
+  width: 95%;
+  background-color: #E51414;
+  transition-delay: 0.2s;
+}
+
+.nav-active .nav {
+  transition-delay: 0.4s;
+  transform: translateX(0);
+}
+
+.nav-active .nav-black { 
+  transition-delay: 0s; 
+}
+
+.nav-active .nav-red { 
+  transition-delay: 0.2s; 
+}
+
+.nav-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-hamburger { 
+  padding: 10px;
+  cursor: pointer;
+}
+
+.ham {
+  width: 18px;
+  height: 3px;
+  margin-bottom: 3px;
+  border-radius: 3px;
+  display: block;
+  background: #B3B3B3;
+}
+
+.ham:nth-child(1) { 
+  transform: translateY(4px) 
+  rotate(45deg); 
+}
+
+.ham:nth-child(3) { 
+  transform: translateY(-2px) 
+  rotate(-45deg); 
+}
+
+.hidden { display: none; }
+.logo { width: 150px; }
+
+.nav-lists,
+.nested-lists {
+  padding: 10px 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.nested-lists { padding: 0px 20px 0px;}
+
+.list {
+  padding: 12px 0;
+  color: #221f1f;
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/*=================================
+  Header styling ends here
+=================================*/  
+
+/*=================================
+  main styling starts here
+=================================*/
+
+main .wrapper {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.netflix-logo { width: 250px; }
+
+h2 {
+  padding: 16px 0px;
+  text-transform: uppercase;
+}
+
+/*=================================
+  main styling ends here
+=================================*/
+
+/*media query starts*/
+/*media query for 995px starts here*/
+@media only screen and (max-width: 995px) {}  
